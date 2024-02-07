@@ -1,10 +1,18 @@
 import React from 'react';
+import style from '@/app/(afterLogin)/layout.module.css';
 
 export default function AfterLogin({ children }: { children: React.ReactNode }) {
     return (
-        <>
-            <p>afterLogin 레이아웃 이건 페이지 라우팅되도 리렌더링이 안되요</p>
-            {children}
-        </>
+        <div className={style.container}>
+            <header className={style.leftSectionWrapper}>
+                <section className={style.leftSection}>g</section>
+            </header>
+            <div className={style.rightSectionWrapper}>
+                <div className={style.rightSectionInner}>
+                    <main className={style.main}>m</main>
+                    <section className={style.rightSection}>r</section>
+                </div>
+            </div>
+        </div>
     );
 }
